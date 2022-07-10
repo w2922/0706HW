@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+    <head>
+        <meta charset="utf-8">
+        <title>0706HW</title>
+        <link rel="stylesheet" href="p.css" type="text/css">
+        <style>
+        p {
+            color: #3e3e3e;  
+            font-family: 'Quattrocento Sans', sans-serif;
+        }
+        /*不要有底線，點了還是白色*/
+        a {
+            text-decoration:none;
+            color:#ffffff;
+        }
+        /*不打的話填不滿*/
+        body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        }
+
+        .header{
+            height: 60px;
+            background: rgb(43, 43, 43);    
+            opacity: 0.7;     
+        }
+
+        .tittle_table {
+            font-size:20px;
+            text-align: center;
+            width:100%;
+            height: 50px; 
+            font-weight:bold;
+            color: #ffffff; 
+        }
+        
+        .body_table {
+            text-align: center;
+            width:50%;
+            height:50px;
+            font-size:20px;
+        }
+        td
+        {
+        padding:15px;
+        }
+        img{
+            max-width:100%;
+        }
+        .nav{
+            top:-60px;
+            position: relative;
+            background-position: center center;
+            background-size: cover;
+            background-image: url(background.jpg);
+            height: 640px;
+            z-index: -1;
+        }
+        .body{
+           height: 1000px;
+           background: rgb(255, 255, 255);
+           display: flex;
+           justify-content: center;
+        }
+        .footer{
+           position: relative;
+           width: 100%;
+           bottom: 0px;
+           height: 70px;
+           background: rgb(0, 0, 0);
+        }
+        </style>
+        
+    </head>
+    
+    <!--html註解-->
+    <body>
+        <div class="header">
+            <table class="tittle_table">
+                <tr>
+                    <td><a href="inbex.html" target="_self">家</a></td>
+                    <td><a href="about.html" target="_self">關於</a></td>
+                    <td><a href="triangle.html" target="_self">三角形</a></td>
+                    <td><a href="video.html" target="_self">奇怪的動畫</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="nav">
+        </div>
+        <div class="body">
+            <style>
+                .delta {
+                    width: 0px;
+                    height: 0px;
+                    border: 50px solid;
+                    border-color:  #00ff00 #185b9d #ff6b6b #83a4d4;
+                    margin: 10px;
+                }
+                .circle{
+                    width: 50px;
+                    height: 50px;
+                    border: 5px solid;
+                    border-radius: 50px;
+                    border-color:  #00ff00 #185b9d #ff6b6b #83a4d4;
+                    margin: 10px;
+                }
+                </style>
+
+            <table>
+                <tr>
+                    <tb>
+                        <div class="delta"></div>
+                        <div class="delta" style="border-color:  #185b9d00 #185b9d00 #ff6b6b00 #83a4d4;"></div>
+                        <div class="delta" style="border-color:  #185b9d00 #185b9d00 #ff6b6b #185b9d00;"></div>
+                        <div class="delta" style="border-color:  #185b9d00 #185b9d #ff6b6b00 #185b9d00;"></div>
+                        <div class="delta" style="border-color:  #00ff00 #185b9d00 #ff6b6b00 #185b9d00;"></div>
+                    </tb>
+                </tr>
+                <tr>
+                    <tb>
+                    <div class="delta" style="border-color:  #185b9d00 #185b9d00 #ff6b6b00 #83a4d4; height: 50px;"></div>
+                    <div class="delta" style="border-color:  #185b9d00 #185b9d00 #ff6b6b #185b9d00; width: 50px;"></div>
+                    <div class="delta" style="border-color:  #185b9d00 #185b9d #ff6b6b00 #185b9d00; height: 50px;"></div>
+                    <div class="delta" style="border-color:  #00ff00 #185b9d00 #ff6b6b00 #185b9d00; width: 50px;"></div>
+                    <div class="circle"></div>
+                    </tb> 
+                </tr>
+                <tr>
+                    <tb><a target="_blank" href="area/1.html"><p style="color: #000000; font-size: 50px;">AREA固定範圍超連結</p></a></tb>
+                </tr>
+            </table>
+            
+
+        </div>
+        <div class="footer">
+            <table>
+                <tr>
+                    <td><a href="https://www.facebook.com/profile.php?id=100002950467293"><img src="FB.png"></a></td>
+                    <td><a href="https://www.pixiv.net/users/20164497"><img src="pixiv.png"></a></td>
+                    <td><a href="https://twitter.com/w29222"><img src="twitter.png"></a></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+</html>

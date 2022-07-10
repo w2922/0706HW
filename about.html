@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+    <head>
+        <meta charset="utf-8">
+        <title>0706HW</title>
+        <link rel="stylesheet" href="p.css" type="text/css">
+        <style>
+        p {
+            color: #3e3e3e;  
+            font-family: 'Quattrocento Sans', sans-serif;
+        }
+        /*不要有底線，點了還是白色*/
+        a {
+            text-decoration:none;
+            color:#ffffff;
+        }
+        /*不打的話填不滿*/
+        body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        }
+
+        .header{
+            height: 60px;
+            background: rgb(43, 43, 43);    
+            opacity: 0.7;     
+        }
+
+        .tittle_table {
+            font-size:20px;
+            text-align: center;
+            width:100%;
+            height: 50px; 
+            font-weight:bold;
+            color: #ffffff; 
+        }
+        
+        .body_table {
+            /*text-align: center;*/
+            width:50%;
+            height:50px;
+            font-size:20px;
+        }
+        td
+        {
+        padding:15px;
+        }
+        img{
+            max-width:100%;
+        }
+        .nav{
+            top:-60px;
+            position: relative;
+            background-position: center center;
+            background-size: cover;
+            background-image: url(background.jpg);
+            height: 640px;
+            z-index: -1;
+        }
+        .body{
+           height: 170px;
+           background: rgb(255, 255, 255);
+           display: flex;
+           justify-content: center;
+        }
+        .footer{
+           position: relative;
+           width: 100%;
+           bottom: 0px;
+           height: 70px;
+           background: rgb(0, 0, 0);
+        }
+        </style>
+        
+    </head>
+    
+    <!--html註解-->
+    <body>
+        <div class="header">
+            <table class="tittle_table">
+                <tr>
+                    <td><a href="inbex.html" target="_self">家</a></td>
+                    <td><a href="about.html" target="_self">關於</a></td>
+                    <td><a href="triangle.html" target="_self">三角形</a></td>
+                    <td><a href="video.html" target="_self">奇怪的動畫</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="nav">
+        </div>
+        <div class="body">
+            <table class="body_table">
+                <tr>
+                    <td><p>嗨!大家好，我是讀了兩年資工畫技進步得比程式能力還多的大春</p><br>而且我除了這兩點以外沒一個能講的，謝謝大家</td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer">
+            <table>
+                <tr>
+                    <td><a href="https://www.facebook.com/profile.php?id=100002950467293"><img src="FB.png"></a></td>
+                    <td><a href="https://www.pixiv.net/users/20164497"><img src="pixiv.png"></a></td>
+                    <td><a href="https://twitter.com/w29222"><img src="twitter.png"></a></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+</html>
