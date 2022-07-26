@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<style>
+    .square{
+        width: 100px;
+        height: 100px;
+        background-color:red;
+    }
+
+    .circle{
+        width: 100px;
+        height: 100px;
+        background-color:red;
+        clip-path: circle(50% at 50% 50%);
+    }
+    .triangle{
+        width: 100px;
+        height: 100px;
+        background-color:red;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+</style>
+<script>
+    function square(){
+        var shape =document.getElementById('shape');
+        shape.className='square'
+    }
+    function circle(){
+        var shape =document.getElementById('shape');
+        shape.className='circle'
+    }
+    function triangle(){
+        var shape =document.getElementById('shape');
+        shape.className='triangle'
+    }
+    
+</script>
+
+</head>
+
+
+<body>
+<div class="square" id="shape"></div>
+<hr>
+<button type="button" onclick="square()">正方形</button>
+<button type="button" onclick="circle()">圓形</button>
+<button type="button" onclick="triangle()">三角形</button>
+
+
+</body>
+
+</html>

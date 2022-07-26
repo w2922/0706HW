@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jquery-3.5.1.min.js"></script>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+}
+.title{
+    font-size: 32px;
+}
+.text{
+    font-size: 20px;
+}
+</style>
+</head>
+
+
+<body>
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <img src="1.png" width="500px">   
+    <p class="title">你發現你在一個陌生的地方醒來</p>
+    <p class="text">你試著想起自己的名子</p>
+    <input id="input1" type="text" placeholder="輸入你的名字"/>
+    <button onclick="yes()">想起來了</button>
+    <button onclick="on()" >懶得想了</button>
+  </div>
+
+</div>
+
+<script>
+var modal = document.getElementById("myModal");
+modal.style.display = "block";
+function reload(){
+    location.reload();
+}
+
+function yes() {
+  const name = document.getElementById("input1").value;
+  modal.style.display = "block";
+  $('.modal-content').html('<img src="2_1.png" width="500px">\
+        <p class="title">你想起來你的名字了</p>\
+        <p class="text">你的名子是:'+name+'</p>\
+        <button onclick="level_1()">OK</button>\
+        ');
+}
+function on(){
+    $('.modal-content').html('<img src="2_2.png" width="500px">\
+        <p class="title">反正名字不是很重要</p>\
+        <p class="text">於是你停止了思考</p>\
+        <button onclick="level_1()">OK</button>\
+        ');
+}
+
+function level_1(){
+    $('.modal-content').html('<img src="3.png" width="500px">\
+        <p class="title">看到了一罐不明藥劑</p>\
+        <p class="text">選擇拿或不拿</p>\
+        <button id="poison" onclick="level_2(1)">拿</button>\
+        <button id="poison" onclick="level_2(0)">不拿</button>\
+        ');
+}
+
+
+function level_2(button){
+    $('.modal-content').html('<img src="4_1.png" width="500px">\
+        <p class="title">發現了一個魔女</p>\
+        <p class="text">看起來很可疑</p>\
+        ');
+    if(button==1){
+        $('.modal-content').append('<button onclick="level_2_1(1)">攻擊他</button>\
+        <button onclick="level_2_1(0)">使用不明藥劑</button>\
+        ');
+    }else{
+        $('.modal-content').append('<button onclick="level_2_1(1)">攻擊他</button>\
+        <button onclick="level_3(0)">逃走</button>\
+        ');
+    }
+}
+function level_2_1(button){
+    if(button==1){
+        $('.modal-content').html('<img src="5_1.png" width="500px">\
+        <p class="title">你死了</p>\
+        <p class="text">你的劍術十分精湛，但在靠近之前就直接被燒成灰燼</p>\
+        <button onclick="reload()">重來</button>\
+        ');
+    }else{
+        $('.modal-content').html('<img src="5_2.png" width="500px">\
+        <p class="title">噗嘻</p>\
+        <p class="text">得到了發情的魔女</p>\
+        <button onclick="level_3(1)">通過</button>\
+        ');
+    }
+}
+
+function level_3(button){
+    $('.modal-content').html('<img src="6.png" width="500px">\
+        <p class="title">發現神秘房間</p>\
+        <p class="text">黑暗的房間</p>\
+        ');
+    if(button==1){
+        $('.modal-content').append('<button onclick="level_3_1(1)">進入</button>'); 
+    }else{
+        $('.modal-content').append('<button onclick="level_3_1(0)">進入</button>');
+    }
+}
+function level_3_1(button){
+    if(button==1){
+        $('.modal-content').html('<img src="6_1.png" width="500px">\
+        <p class="title">進入空間魔法房間</p>\
+        <p class="text">魔女輕鬆地就破除了高級的空間魔法</p>\
+        <button onclick="level_4()">通過</button>\
+        ');
+    }else{
+        $('.modal-content').html('<img src="6_2.png" width="500px">\
+        <p class="title">你死了</p>\
+        <p class="text">這是魔法攻擊!!</p>\
+        <p class="text">在你如此驚呼之時就被空間魔法撕碎</p>\
+        <button onclick="reload()">重來</button>\
+        ');
+    }
+}
+
+function level_4(){
+    $('.modal-content').html('<img src="7_1.png" width="500px">\
+        <p class="title">發現火龍</p>\
+        <p class="text">必須先處理火焰護罩</p>\
+        <button onclick="level_4_1(1)">劍技攻擊</button>\
+        <button onclick="level_4_1(0)">魔女攻擊</button>\
+        ');
+}
+function level_4_1(button){
+    if(button==1){
+        $('.modal-content').html('<img src="7_1_1.png" width="500px">\
+        <p class="title">攻擊無效</p>\
+        <p class="text">綿延不絕的火焰迅速的填補破口</p>\
+        <button onclick="level_4_1(0)">魔女攻擊</button>\
+        ');
+    }else{
+        $('.modal-content').html('<img src="7_1_2.png" width="500px">\
+        <p class="title">護罩破除!</p>\
+        <p class="text">魔女僅僅是發出魔力就壓制了火焰</p>\
+        <button onclick="level_4_2()">確認</button>\
+        ');
+    }
+}
+function level_4_2(){
+        $('.modal-content').html('<img src="7_2.png" width="500px">\
+        <p class="title">火龍現形</p>\
+        <p class="text">火龍有很強的魔法抗性，建議使用物理攻擊</p>\
+        <button onclick="level_4_3(1)">劍技攻擊</button>\
+        <button onclick="level_4_3(0)">魔女攻擊</button>\
+        ');
+}
+function level_4_3(button){
+    if(button==1){
+        $('.modal-content').html('<img src="7_2_1.png" width="500px">\
+        <p class="title">啪!沒了!</p>\
+        <p class="text">力聚一點，全力一擊，但武器承受不住巨力衝擊應聲而斷</p>\
+        <button onclick="level_4_3(0)">魔女攻擊</button>\
+        ');
+    }else{
+        $('.modal-content').html('<img src="7_2_2.png" width="500px">\
+        <p class="title">想不到魔女連體術都如此強大</p>\
+        <p class="text">魔女縱身一躍，將火龍一擊斃命</p>\
+        <button onclick="level_4_end()">怕</button>\
+        ');
+    }
+}
+function level_4_end(){
+        $('.modal-content').html('<p class="title">魔女開啟傳送陣將你們送離此地</p>\
+        <p class="text">原來你會傳送，怎麼他媽不早用</p>\
+        <p class="text">回家後狠狠的教訓了魔女一番</p>\
+        ');
+}
+</script>
+
+</body>
+</html>
